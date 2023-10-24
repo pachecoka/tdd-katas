@@ -35,8 +35,14 @@ var _ = Describe("Fizzbuzz", func() {
 	})
 	When("Number is not multiple of 3,5,7,11", func() {
 		number := 1
-		It("Should return Fizz", func() {
+		It("Should return the input", func() {
 			Expect(foo.ExecuteFizzbuzzUsecase(number)).To(Equal(strconv.Itoa(number)))
+		})
+	})
+	When("Number is multiple of 3,5,7,11", func() {
+		number := 1
+		It("Should return FizzBuzzWhizzBang", func() {
+			Expect(foo.ExecuteFizzbuzzUsecase(number)).To(ContainSubstring("FizzBuzzWhizzBang"))
 		})
 	})
 })
