@@ -13,3 +13,4 @@ Each package of the project contains a different kata to work on. Below you can 
 - [Bank Account](https://sammancoaching.org/kata_descriptions/bank_account.html)
 - [Shopping Basket Discount](https://sammancoaching.org/kata_descriptions/shopping_basket.html)
 - [Strange Characters](https://sammancoaching.org/kata_descriptions/strange_characters.html)
+- [Roman Numerals](https://codingdojo.org/kata/RomanNumerals/)
