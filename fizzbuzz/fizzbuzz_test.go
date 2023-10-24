@@ -4,9 +4,10 @@ import (
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	"github.com/pachecoka/tdd-katas/fizzbuzz"
+	"strconv"
 )
 
-var foo fizzbuzz.FizzbuzzUsecase
+var foo fizzbuzz.FizzbuzzUsecaseI = &fizzbuzz.FizzbuzzUsecase{}
 var _ = Describe("Fizzbuzz", func() {
 	When("Number is multiple of 3", func() {
 		number := 3
@@ -35,7 +36,7 @@ var _ = Describe("Fizzbuzz", func() {
 	When("Number is not multiple of 3,5,7,11", func() {
 		number := 1
 		It("Should return Fizz", func() {
-			Expect(foo.ExecuteFizzbuzzUsecase(number)).To(Equal(number))
+			Expect(foo.ExecuteFizzbuzzUsecase(number)).To(Equal(strconv.Itoa(number)))
 		})
 	})
 })
