@@ -15,17 +15,21 @@ type FizzbuzzUsecase struct {
 }
 
 func (f *FizzbuzzUsecase) ExecuteFizzbuzzUsecase(number int) string {
+	var response = ""
 	if number%3 == 0 {
-		return FIZZ
+		response += FIZZ
 	}
 	if number%5 == 0 {
-		return Buzz
+		response += Buzz
 	}
 	if number%7 == 0 {
-		return Whizz
+		response += Whizz
 	}
 	if number%11 == 0 {
-		return Bang
+		response += Bang
+	}
+	if response != "" {
+		return response
 	}
 	return strconv.Itoa(number)
 }

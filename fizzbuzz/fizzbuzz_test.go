@@ -40,7 +40,7 @@ var _ = Describe("Fizzbuzz", func() {
 		})
 	})
 	When("Number is multiple of 3,5,7,11", func() {
-		number := 1
+		number := 3 * 5 * 7 * 11
 		It("Should return FizzBuzzWhizzBang", func() {
 			Expect(foo.ExecuteFizzbuzzUsecase(number)).To(ContainSubstring("FizzBuzzWhizzBang"))
 		})
